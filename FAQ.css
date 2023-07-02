@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red:hsl(14, 88%, 65%);
+    --Verydark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --White: #fff;
+    }
+    
+
+body{
+    background: linear-gradient(180deg, var(--Soft-violet),var(--Soft-blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    height: 100vh;
+}
+
+.main__container{
+   background-color: var(--White);
+   border-radius: 15px;
+   box-shadow: 5px 0 20px var(--Verydark-grayish-blue);
+   min-height: 536px;
+   margin: 150px auto 50px;
+   padding: 24px;
+   width: 350px;
+}
+
+.main__container__section1__img{
+    display: block;
+    margin: -130px auto 0;
+    width: 240px;
+}
+
+.main__container__section1__img--shadow{
+    content: url(./images/bg-pattern-mobile.svg);
+    margin: -75px auto 0;
+    width: 240px;
+
+}
+
+.main__container__section2{
+    margin: 60px 10px 10px;
+}
+
+.main__container__section2__header1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main__container__section2__details{
+    font-size: 1.2em;
+    list-style: none;
+    margin: 16px 0;
+    position: relative;
+}
+
+.main__container__section2__details[open]{
+    font-weight: 700;
+}
+
+.main__container__section2__details[open] .main__container__section2__details__arrowimg{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.main__container__section2__details__arrowimg{
+    margin-left: 15px;
+    position: absolute;
+    right: 1px;
+    transition: 300ms;
+}
+
+.main__container__section2__details:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+p{
+    color: var(--Dark-grayish-blue);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.attribution{
+    margin: 20px auto 10px;
+}
+
+
+/*___________________________Reponsive for desktop _____________________________________*/
+
+
+@media (min-width:1044px){
+        .main__container{
+            background-image: url("./images/bg-pattern-desktop.svg");
+            background-position-x:-536px;
+            background-position-y:-281px;
+            display: flex;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 924px;
+
+        }
+        .main__containersection1,.main__container__section2{
+            width: 100%;
+        }
+        .main__container__section1__img{
+            width: 474px;
+            margin: 67px 0 0 -130px;
+        }
+        .main__container__section1__img--shadow{
+            content: "";
+        }
+        .main__container__section2{
+            padding: 15px 80px 20px 40px;
+        }
+
+        .main__container__section2__header1{
+            font-size: 3.5em;
+            text-align: left;
+        }
+}
